@@ -1,0 +1,56 @@
+
+
+install docker and docker.io  
+
+make sure in root 
+
+> sudo su 
+
+> mkdir test 
+> cd test
+> docker pull nginx
+> touch Dockerfile index.html
+> nano Dockerfile
+here paste this command in docker
+
+FROM nginx:alpine
+COPY index.html /usr/share/nginx/html/index.html
+
+> nano index.html
+
+paste html script--basic
+
+
+> docker build -t test .
+
+> check docker images
+
+> docker login 
+
+> docker images -- used for repo and image id and tag
+
+> docker tag [imageid] [usernameofdockerhubid/repository:tag] -- for simple dont use brackets i just make a note of it
+
+> docker push usernameofdockerhubid/repository:tag
+
+> after push into container -- a script shows pushed
+> now login docker and check for repositories and refresh the page to see the repo click the repo and u will see a
+name like 
+eg: docker pull id/name
+
+> now main task when we pulling make sure remove the running container by using and also for images that same name will be
+> docker container stop containerid
+> docker container rm containerid
+> docker rmi -f  7a11dbccbe56 -- like this
+
+> now use pull command copied from dockerhub
+> docker images-- see now images is create now to run
+> docker run -d -p 80:80 repo:tagname
+
+> curl localhost:80
+
+it works
+
+
+
+
