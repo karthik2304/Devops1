@@ -1,3 +1,3 @@
 FROM nginx:alpine
-COPY . /usr/share/nginx/html
-ENTRYPOINT ["/usr/sbin/nginx"]
+COPY index.html /usr/share/nginx/html
+
